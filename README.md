@@ -1,1 +1,3 @@
-# hellow-world
+# hello-world
+
+First Sample application
