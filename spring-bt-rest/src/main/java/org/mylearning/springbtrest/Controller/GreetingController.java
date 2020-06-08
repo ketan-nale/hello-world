@@ -24,6 +24,13 @@ public class GreetingController {
 		logger.debug(name);
 		return new Greeting(counter.incrementAndGet(), String.format(template, name));
 	}
+
+	@GetMapping("/greeting3")
+	public Greeting greeting3(@RequestParam(value = "name", defaultValue = "Master") String name) {
+		logger.info("INSIDE org.mylearning.springbtrest.Controller.GreetingController.greeting3(String)");
+		logger.debug(name);
+		return new Greeting(counter.incrementAndGet(), String.format(template, name));
+	}
 	
 	@PostMapping("/greeting")
 	public void saveGreeting(@RequestBody Greeting greeting) {
